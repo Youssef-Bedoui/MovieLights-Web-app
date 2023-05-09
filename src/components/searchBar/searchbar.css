@@ -1,0 +1,18 @@
+#use-autocomplete-demo-listbox {
+  z-index: 5 !important;
+  font-weight: 600 !important;
+  line-height: 30px !important;
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 300px;
+}
+#use-autocomplete-demo {
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+#use-autocomplete-demo-listbox li {
+  overflow-x: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  padding: 0 5px !important;
+}

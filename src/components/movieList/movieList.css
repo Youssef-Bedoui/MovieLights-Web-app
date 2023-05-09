@@ -1,0 +1,11 @@
+.wrapper{
+    padding: 0 30px;
+}
+.movie_list{
+ margin: 3% 0;
+}
+.movie-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 20px;
+}

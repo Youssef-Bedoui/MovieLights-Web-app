@@ -1,0 +1,29 @@
+.trend-card {
+  height: 60% !important;
+  width: 35% !important;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.trend-top {
+  height: 400px !important;
+  width: 100% !important;
+}
+.trend-top img {
+  height: 100%;
+  overflow: hidden;
+}
+
+.trend-bottom .title{
+    font-size: 16px;
+    color: var(--font-primary);
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 3px var(--black);
+    padding: 5px 10px;
+    text-align: center;
+}
+

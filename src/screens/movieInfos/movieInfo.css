@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+.movie {
+  background: #16222a;
+  background: -webkit-linear-gradient(to top, #3a6073, #16222a);
+  background: linear-gradient(to top, #3a6073, #16222a);
+}
+.movie_info {
+  background: #16222a;
+  background: -webkit-linear-gradient(to top, #3a6073, #16222a);
+  background: linear-gradient(to top, #3a6073, #16222a);
+  min-height: calc(100vh - 66px);
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+}
+
+.backdrop_image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden !important;
+  z-index: -3;
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  filter: blur(5px) brightness(0.5);
+}
+
+.left-info {
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.player_container {
+  flex-direction: column;
+  padding-top: 20px;
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+}
+.player_container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.right-info {
+  width: 45%;
+  z-index: 3;
+}
+
+.info-container {
+  padding: 30px 20px;
+}
+.title-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-header h2 {
+  color: var(--font-secondary);
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+  text-shadow: 2px 2px 2px var(--black);
+}
+
+.genres {
+  color: var(--font-primary);
+  text-shadow: 1px 1px 3px #36b1ee;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.movie-overview {
+  padding: 20px 0px;
+}
+.movie-overview p {
+  padding: 5px;
+  font-family: "Rubik", sans-serif !important;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--font-primary);
+}
+.top-info {
+  font-family: "Rubik", sans-serif;
+  color: #36b1ee;
+  font-weight: 600;
+}
+.runtime {
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}
+.top-info .MuiSvgIcon-root {
+  width: 30px !important;
+  height: 30px !important;
+  color: #36b1ee !important;
+  margin-right: 5px !important;
+}
+
+.dateTime {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0505054b;
+  padding: 5px;
+  font-family: "Rubik", sans-serif;
+}
+
+.production {
+  background-color: #16222a60;
+  padding: 5px;
+  color: var(--font-secondary);
+  font-weight: 600;
+}
+.production h5 {
+  color: lightgray;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .movie_info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .title-header h2 {
+    font-size: 25px !important;
+    padding-bottom: 5px;
+  }
+
+  .left-info {
+    width: 100%;
+  }
+
+  .right-info {
+    width: 100%;
+  }
+  .other_trailers {
+  width: 80vw !important;
+}
+.actor-card{
+  width: 130px !important;
+  margin: 5px;
+}
+}
+
+.other_trailers {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding: 10px 0;
+  width: 50vw;
+  overflow-y: hidden;
+}
+
+.trailer_img {
+  margin-right: 10px;
+  height: 150px;
+  cursor: pointer;
+}
+.trailer_img img {
+  height: 100px;
+  width: 150px !important;
+}
+
+.trailer_img:last-child {
+  margin-right: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.actors-section {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  width: 90%;
+  padding: 0px 20px;
+  margin: 20px auto;
+}
+.actors-section h2 {
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+      font-family: "Rubik", sans-serif !important;
+
+}
+.actors-section h2::after {
+  content: "";
+  display: block;
+  width: 90%;
+  border: 2px solid;
+  margin: 10px auto;
+  color: #ffffffa8
+}
+.actors-container {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.actor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  height: 200px;
+  width: 150px;
+  border-radius: 10px !important;
+ background-image: linear-gradient(to top, #e6e9f0a9 0%, #eef1f580 100%);
+ box-shadow: 0 0 3px #e6e9f09c;
+ transition: .3s ease;
+}
+.actor-card:hover{
+  transform: scale(1.5);
+}
+.actor-card img{
+  height: 160px;
+  width: 100%;
+object-fit:fill;
+overflow: hidden;
+}
+.actor-names{
+  padding: 5px 0;
+  text-align: center;
+}
+.actor-names h5:first-child{
+  font-weight: 600; 
+    font-family: "Rubik", sans-serif !important;
+    font-size: 16px;
+}
+.actor-names h5:last-child{
+  font-weight: 600; 
+    font-family: "Rubik", sans-serif !important;
+    color: rgb(99, 63, 16);
+    font-size: 15px;
+}
+.actor-card .logo{
+  width: 80%;
+  font-size: 18px;
+  text-align: center;
+  background-image: linear-gradient(to right,#000, gray);
+  transform: rotate(25deg);
+}

@@ -1,0 +1,10 @@
+.pagination-container {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  background: var(--font-secondary);
+}
+.pagination-container .MuiButtonBase-root {
+  font-weight: bold !important ;
+  height: 40px !important;
+}

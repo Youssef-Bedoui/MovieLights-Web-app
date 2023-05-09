@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap");
+
+:root {
+  --black: #020001;
+  --white: #e5e9f2;
+  --font-primary: #fff;
+  --font-secondary: #eabf15;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mali", cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
+.container,
+.App,
+body {
   min-height: 100vh;
+}
+body {
+  background: #16222a;
+  background: -webkit-linear-gradient(to top, #3a6073, #16222a);
+  background: linear-gradient(to top, #3a6073, #16222a);
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0 auto;
+  background-image: linear-gradient(to left, #f1f1f1, #8b8b8b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0 10px 5px rgba(134, 134, 134, 0.404);
+}
+
+.genre_header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--font-secondary);
 }
 
-.App-link {
-  color: #61dafb;
+.MuiInputBase-root {
+  box-shadow: 0 0 5px var(--font-primary);
+  border-radius: 10px !important;
+}
+.MuiFormLabel-root {
+  color: var(--font-primary) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.genre_Title {
+  color: var(--font-primary);
+  margin-bottom: 15px;
+  font-weight: 600;
 }

@@ -1,0 +1,27 @@
+.notFound_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10%;
+  height: 100vh;
+}
+.notFound_container h1 {
+  font-weight: bold;
+  color: var(--font-primary);
+  margin-bottom: 20px;
+}
+.notFound_container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: coral;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.notFound_container button:hover {
+  color: coral;
+  background-color: transparent;
+  outline: 2px solid coral;
+}

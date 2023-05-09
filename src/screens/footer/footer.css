@@ -1,0 +1,21 @@
+.footer{
+ justify-content: space-between;
+ align-items: center;
+ background: #f7f1f1;
+ padding: 20px 30px;
+ font-weight: 600;
+}
+.footer .logo{
+    font-size: 30px;
+      background-image: linear-gradient(to left, #000000, #201f1f);
+
+    flex: 2;
+}
+@media (max-width: 480px) {
+  .footer{
+    padding: 15px 5px;
+  }
+  .footer .logo{
+    margin-right: 20px;
+  }
+}

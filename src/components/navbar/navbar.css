@@ -1,0 +1,28 @@
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.navbar .links {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.navbar .links a{
+  color: var(--white) !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: .2s ease;
+}
+.navbar .links a:hover{
+  transform: scale(1.02);
+
+}
+.navbar .searchBar{
+  margin:  5px;
+}

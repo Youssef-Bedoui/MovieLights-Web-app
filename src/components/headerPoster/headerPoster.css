@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+.header-wrapper {
+  margin: 0;
+  margin-top: 10px;
+  height: calc(100vh - 66px);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.74),
+    rgba(0, 0, 0, 0.438) 60%
+  );
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.wrapper-shadow {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+  object-fit: cover;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  filter: blur(30px);
+}
+
+@media (max-width: 780px) {
+  .header-left {
+    display: none !important;
+  }
+  .header-right {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.header-container {
+  overflow: hidden;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+}
+.header-left {
+  padding: 10% 5%;
+}
+
+.header-left h2,
+.header-right .poster-title,
+.poster-overview {
+  font-family: "Rubik", sans-serif;
+}
+
+.header-left h2:first-child {
+  color: var(--font-primary);
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px var(--black);
+}
+.header-left h2:last-child {
+  color: var(--font-secondary);
+  font-size: 40px;
+}
+
+.header-right {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.header-right img {
+  width: 100%;
+  height: 100vh;
+}
+
+.header-right .poster-info {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  background: #00000083;
+  padding: 5px 15%;
+}
+.header-right .poster-title {
+  color: var(--font-primary);
+  text-shadow: 2px 2px 3px #000;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.poster-overview {
+  font-size: 17px;
+  color: var(--font-primary);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 6;
+  -webkit-line-clamp: 6;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+}
+
+.trend-header {
+  padding: 10px;
+  position: relative;
+}
+.movie-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  transition: transform 0.3s ease-in-out;
+}
+
+.MuiSvgIcon-root {
+  width: 40px !important;
+  height: 50px !important;
+  opacity: 0.8;
+  transition: 0.2s ease !important;
+}
+.MuiSvgIcon-root:hover {
+  position: 1px;
+  transform: scale(1.2);
+}
+.arrow {
+  position: absolute;
+  top: 40%;
+  z-index: 3;
+  background: #000000a2;
+  width: 30px;
+  height: 30px;
+  color: var(--font-secondary);
+  cursor: pointer;
+}
+.arrow.left {
+  left: 10px;
+}
+.arrow.right {
+  right: 10px;
+}
+
+.arrow.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.movie-list::-webkit-scrollbar {
+  display: none !important;
+}
