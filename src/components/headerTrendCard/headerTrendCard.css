@@ -1,6 +1,6 @@
 .trend-card {
   height: 60% !important;
-  width: 35% !important;
+  width: 35%;
   cursor: pointer;
   margin: 0 20px;
 }
@@ -25,5 +25,10 @@
     text-shadow: 0 0 3px var(--black);
     padding: 5px 10px;
     text-align: center;
+}
+@media (max-width : 480px) {
+  .trend-card{
+    width: auto !important;
+  }
 }
 

@@ -14,8 +14,11 @@
   font-weight: 600 !important;
 }
 @media (max-width: 480px) {
-  .MuiInputBase-root{
+  .MuiAutocomplete-root{
     width: 200px !important;
+    display: block !important;
+    float: right !important;
   }
+  
 
 }

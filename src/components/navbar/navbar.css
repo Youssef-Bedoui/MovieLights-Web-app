@@ -26,3 +26,15 @@
 .navbar .searchBar{
   margin:  5px;
 }
+
+@media (max-width : 480px) {
+  .navbar{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .navbar .logo{
+   flex: 1;
+  }
+}
