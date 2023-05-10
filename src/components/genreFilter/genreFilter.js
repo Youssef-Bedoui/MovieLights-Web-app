@@ -3,7 +3,7 @@ import "./genreFilter.css";
 import TextField from "@mui/material/TextField";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 import movieApi from "../../movieApi";
-import { APIKey } from "../../movieApiKey";
+import APIKey from "../../config.json";
 import { addMovies } from "../../redux/features/movieSlice";
 import { useDispatch } from "react-redux";
 

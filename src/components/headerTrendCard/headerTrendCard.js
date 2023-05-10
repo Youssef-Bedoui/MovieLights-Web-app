@@ -1,6 +1,6 @@
 import React from "react";
 import "./headerTrendCard.css";
-import { movieImagePath } from "../../movieImagePath";
+import movieImagePath  from "../../config.json";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 

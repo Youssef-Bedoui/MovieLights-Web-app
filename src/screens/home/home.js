@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
-import { APIKey } from "../../movieApiKey";
+import  APIKey  from "./../../config.json";
 import movieApi from "../../movieApi";
 import MovieList from "../../components/movieList/movieList";
 import { useDispatch } from "react-redux";
