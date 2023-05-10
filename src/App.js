@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Routes>
+        <Routes basename="/MovieLights-Web-app">
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<MoviesScreen />} />
           <Route path="/tvShows" element={<TvShowsScreen />} />
