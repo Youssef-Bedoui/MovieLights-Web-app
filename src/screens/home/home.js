@@ -33,7 +33,7 @@ export default function Home() {
 
   useEffect(() => {
     const getMovies = async () => {
-      const response = await movieApi.get(`movie/top_rated?api_key=${config.APIKey}&page=${currPage}`);
+      const response = await movieApi.get(`/movie/top_rated?api_key=${config.APIKey}&page=${currPage}`);
       // console.log(response, "home data");
       const movies = response.data.results;
       setPageCount(Math.floor(response.data.total_pages));

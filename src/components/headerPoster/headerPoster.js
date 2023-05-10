@@ -6,7 +6,6 @@ import HeaderTrendCard from "../headerTrendCard/headerTrendCard";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import ArrowBackIosSharpIcon from "@mui/icons-material/ArrowBackIosSharp";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 export default function HeaderPoster({ type }) {
   const navigate = useNavigate();
@@ -24,8 +23,8 @@ export default function HeaderPoster({ type }) {
   useEffect(() => {
     // For home poster
     const getMovie = async () => {
-      const response = await axios.get(
-        `https://api.themoviedb.org/3/discover/movie/?api_key=${config.APIKey}`
+      const response = await movieApi.get(
+        `/discover/movie?api_key=${config.APIKey}`
       );
       const movies = response.data.results;
       // console.log(movies, "movies");
@@ -49,10 +48,12 @@ export default function HeaderPoster({ type }) {
       getTrend();
     } else if (type === "home_discover") {
       getMovie();
+    }else{
+      return null;
     }
   }, [setRandomMovie, setTrendingMovies, type]);
-
-  //handle the scroll
+  
+//handle the scroll
   const handleArrowClick = (direction) => {
     const movieList = movieListRef.current;
     const scrollDistance = 400;
@@ -142,8 +143,8 @@ export default function HeaderPoster({ type }) {
             <div className="header-left">
               <h2>Discover movies and series with MovieLights</h2>
               <h2>
-                Get key details, ratings, trailers, and more - all in one place
-                !
+                Get key details, ratings, trailers, and more - all in one
+                place !
               </h2>
             </div>
           )}
