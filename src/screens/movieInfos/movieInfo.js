@@ -21,7 +21,6 @@ export default function MovieInfo() {
   const [movieBudget, setMovieBudget] = useState("No info");
   const [movieRevenue, setMovieRevenue] = useState("No info");
   const [trailerURL, setTrailerURL] = useState("");
-  const [movieUrl, setMovieUrl] = useState("");
   const [trailers, setTrailers] = useState([]);
   const [actors, setActors] = useState([]);
 
