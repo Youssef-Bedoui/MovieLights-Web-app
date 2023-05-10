@@ -20,7 +20,7 @@
 
 #config files
 movieApi.js
-movieApi.js
+movieApiKey.js
 movieImagePath.js
 
 npm-debug.log*
