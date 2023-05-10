@@ -1,0 +1,4 @@
+{"movieImagePath":"https://image.tmdb.org/t/p/w1280",
+"baseURL": "https://api.themoviedb.org/3/",
+"APIKey" : "f1a9834ac832fe0d454f8a81f7197759"
+}
