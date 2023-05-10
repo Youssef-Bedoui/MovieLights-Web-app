@@ -3,7 +3,7 @@ import "./genreFilter.css";
 import TextField from "@mui/material/TextField";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 import movieApi from "../../movieApi";
-import APIKey from "../../config.json";
+import config from "../../config.json";
 import { addMovies } from "../../redux/features/movieSlice";
 import { useDispatch } from "react-redux";
 
@@ -25,7 +25,7 @@ export default function GenreFilter({
   useEffect(() => {
     const getGenres = async () => {
       const response = await movieApi.get(
-        `/genre/${type}/list?api_key=${APIKey}`
+        `/genre/${type}/list?api_key=${config.APIKey}`
       );
       const fetchedGenres = response.data.genres;
       console.log(fetchedGenres, "fetchdd");
@@ -43,7 +43,7 @@ export default function GenreFilter({
   };
 
   const getMoviesByGenre = async () => {
-    const apiUrl = `/discover/movie?api_key=${APIKey}&with_genres=${genreID}&page=${currPage}`;
+    const apiUrl = `/discover/movie?api_key=${config.APIKey}&with_genres=${genreID}&page=${currPage}`;
     const response = await movieApi.get(apiUrl);
     const movies = response.data.results;
     dispatch(addMovies(movies));

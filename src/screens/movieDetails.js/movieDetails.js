@@ -1,6 +1,6 @@
 import React from "react";
 import "./movieDetails.css";
-import movieImagePath from "../../config.json";
+import config from "../../config.json";
 import { useNavigate } from "react-router-dom";
 
 export default function MovieDetails({ data, type }) {
@@ -21,24 +21,28 @@ export default function MovieDetails({ data, type }) {
     >
       <img
         className="image_shadow"
-        src={movieImagePath + data.poster_path}
+        src={config.movieImagePath + data.poster_path}
         alt={data.title}
       />
       <div className="card-body">
         <div className="card-top">
           <img
             className="image_poster"
-            src={movieImagePath + data.poster_path}
-            alt={type === "movie" || "undefined" ? data.title : data.name}
+            src={config.movieImagePath + data.poster_path}
+            alt={
+              type === "movie" || type === "undefined" ? data.title : data.name
+            }
           />
         </div>
         <div className="card-bottom">
           <div className="card-details">
             <h3 className="title">
-              {type === "movie" || "undefined" ? data.title : data.name}
+              {type === "movie" || type === "undefined"
+                ? data.title
+                : data.name}
             </h3>
             <p>
-              {type === "movie" || "undefined"
+              {type === "movie" || type === "undefined"
                 ? data.release_date
                 : data.first_air_date}
             </p>

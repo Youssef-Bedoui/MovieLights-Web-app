@@ -23,7 +23,7 @@ export default function MovieList({ type, currPage }) {
               <MovieDetails
                 key={index}
                 data={movie}
-                type={SearchedMovies ? "movie" : type}
+                type={SearchedMovies.length ? "movie" : type}
                 currPage={currPage}
               />
             ))}

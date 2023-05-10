@@ -2,7 +2,7 @@ import * as React from "react";
 import "./searchbar.css";
 import useAutocomplete from "@mui/base/useAutocomplete";
 import { styled } from "@mui/system";
-import  APIKey  from "../../config.json";
+import  config  from "../../config.json";
 import { useDispatch } from "react-redux";
 import { addSearchedMovies } from "../../redux/features/movieSlice";
 import { useNavigate } from "react-router-dom";
@@ -52,7 +52,7 @@ export default function SearchBar() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${query}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${config.APIKey}&query=${query}`
       );
       const data = await response.json();
       setDataSearched(data.results);

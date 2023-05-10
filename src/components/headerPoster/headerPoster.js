@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./headerPoster.css";
-import  movieImagePath  from "../../config.json";
 import movieApi from "../../movieApi";
-import APIKey  from "../../config.json";
+import config  from "../../config.json";
 import HeaderTrendCard from "../headerTrendCard/headerTrendCard";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import ArrowBackIosSharpIcon from "@mui/icons-material/ArrowBackIosSharp";
@@ -24,7 +23,7 @@ export default function HeaderPoster({ type }) {
   useEffect(() => {
     // For home poster
     const getMovie = async () => {
-      const response = await movieApi.get(`/discover/movie/?api_key=${APIKey}`);
+      const response = await movieApi.get(`/discover/movie/?api_key=${config.APIKey}`);
       const movies = response.data.results;
       // console.log(movies, "movies");
       const randomMovie = movies[Math.floor(Math.random() * movies.length)];
@@ -34,7 +33,7 @@ export default function HeaderPoster({ type }) {
 
     const getTrend = async () => {
       const response = await movieApi.get(
-        `/trending/${type}/day?api_key=${APIKey}`
+        `/trending/${type}/day?api_key=${config.APIKey}`
       );
       const movies = response.data.results;
       // console.log(movies, "trends");
@@ -71,7 +70,7 @@ export default function HeaderPoster({ type }) {
     <div className="header-wrapper">
       <img
         className="wrapper-shadow"
-        src={movieImagePath + randomMovie.poster_path}
+        src={config.movieImagePath + randomMovie.poster_path}
         alt={
           type === "movie" || type === "home_discover"
             ? randomMovie.title
@@ -149,7 +148,7 @@ export default function HeaderPoster({ type }) {
           {type === "home_discover" && (
             <div className="header-right">
               <img
-                src={movieImagePath + randomMovie.poster_path}
+                src={config.movieImagePath + randomMovie.poster_path}
                 alt={randomMovie.name}
                 onClick={() => navigateToMovie(randomMovie.id, "movie")}
               />

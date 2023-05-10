@@ -1,6 +1,6 @@
 import React from "react";
 import "./headerTrendCard.css";
-import movieImagePath  from "../../config.json";
+import config  from "../../config.json";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -25,7 +25,7 @@ export default function HeaderTrendCard({ movie, type }) {
         className="trend-container"
       >
         <div className="trend-top">
-          <img src={movieImagePath + movie.poster_path} alt={movie.title} />
+          <img src={config.movieImagePath + movie.poster_path} alt={movie.title} />
         </div>
         <div className="trend-bottom">
           <h2 className="title">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
-import  APIKey  from "./../../config.json";
 import movieApi from "../../movieApi";
+import  config from "./../../config.json";
 import MovieList from "../../components/movieList/movieList";
 import { useDispatch } from "react-redux";
 import { addMovies } from "../../redux/features/movieSlice";
@@ -18,6 +18,8 @@ export default function Home() {
   const [pageCount, setPageCount] = useState(null);
     const location = useLocation();
 
+    console.log(config.APIKey)
+
     useEffect(() => {
       setIsLoading(true);
       const timeout = setTimeout(() => {
@@ -31,7 +33,7 @@ export default function Home() {
 
   useEffect(() => {
     const getMovies = async () => {
-      const response = await movieApi.get(`movie/top_rated?api_key=${APIKey}&page=${currPage}`);
+      const response = await movieApi.get(`movie/top_rated?api_key=${config.APIKey}&page=${currPage}`);
       // console.log(response, "home data");
       const movies = response.data.results;
       setPageCount(Math.floor(response.data.total_pages));

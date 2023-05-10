@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./movieInfo.css";
 import movieApi from "../../movieApi";
-import APIKey from "../../config.json";
+import config from "../../config.json";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addMovieInfo, getMovieInfo } from "../../redux/features/movieSlice";
-import movieImagePath from "../../config.json";
 import RateStars from "../../components/rateStarts/rateStars";
 import HdIcon from "@mui/icons-material/Hd";
 import Footer from "../footer/footer";
@@ -31,7 +30,7 @@ export default function MovieInfo() {
 
     const getMovieInfo = async () => {
       const response = await movieApi.get(
-        `/${type}/${movieID}?api_key=${APIKey}`
+        `/${type}/${movieID}?api_key=${config.APIKey}`
       );
       const fetchedMovie = response.data;
       setRate(fetchedMovie.vote_average);
@@ -44,7 +43,7 @@ export default function MovieInfo() {
 
       //get trailer url
       const trailerResponse = await movieApi.get(
-        `/movie/${movieID}/videos?api_key=${APIKey}`
+        `/movie/${movieID}/videos?api_key=${config.APIKey}`
       );
       const trailers = trailerResponse.data.results;
 
@@ -65,7 +64,7 @@ export default function MovieInfo() {
 
       //get actors info
       const actorInfo = await movieApi.get(
-        `/${type}/${movieID}/credits?api_key=${APIKey}&language=en-US`
+        `/${type}/${movieID}/credits?api_key=${config.APIKey}&language=en-US`
       );
       const fetchedActors = actorInfo.data.cast;
       // console.log(fetchedActors, "actors");
@@ -81,7 +80,7 @@ export default function MovieInfo() {
         {movieInfo?.poster_path && (
           <img
             className="backdrop_image"
-            src={`${movieImagePath}/${movieInfo.backdrop_path}`}
+            src={`${config.movieImagePath}/${movieInfo.backdrop_path}`}
             alt={movieInfo.title}
           />
         )}
@@ -182,7 +181,7 @@ export default function MovieInfo() {
             <div className="actor-card">
               {actor.profile_path ? (
                 <img
-                  src={`${movieImagePath}${actor.profile_path}`}
+                  src={`${config.movieImagePath}${actor.profile_path}`}
                   alt={actor.name}
                 />
               ) : (

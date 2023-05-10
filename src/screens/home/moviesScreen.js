@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./moviesScreen.css";
 import { useDispatch } from "react-redux";
 import movieApi from "../../movieApi";
-import  APIKey  from "../../config.json";
+import  config  from "../../config.json";
 import { addMovies } from "../../redux/features/movieSlice";
 import HeaderPoster from "../../components/headerPoster/headerPoster";
 import MovieList from "../../components/movieList/movieList";
@@ -37,7 +37,7 @@ export default function TvShowsScreen() {
   useEffect(() => {
     const getMovies = async () => {
       const response = await movieApi.get(
-        `/discover/movie?api_key=${APIKey}&with_genres=${currGenre}&page=${currPage}`
+        `/discover/movie?api_key=${config.APIKey}&with_genres=${currGenre}&page=${currPage}`
       );
       // console.log(response);
       const movies = response.data.results;
