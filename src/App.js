@@ -19,7 +19,6 @@ function App() {
           <Route path="/tvShows" element={<TvShowsScreen />} />
           <Route path="/about_movie/:movieID/:type" element={<MovieInfo />} />
           <Route path="/search" element={<SearchResults />} />
-          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     </div>
