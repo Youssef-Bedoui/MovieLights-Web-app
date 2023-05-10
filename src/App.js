@@ -13,13 +13,13 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Routes basename="/MovieLights-Web-app">
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<MoviesScreen />} />
-          <Route path="/tvShows" element={<TvShowsScreen />} />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/movies" element={<MoviesScreen />} />
+          <Route exact path="/tvShows" element={<TvShowsScreen />} />
           <Route path="/about_movie/:movieID/:type" element={<MovieInfo />} />
           <Route path="/search" element={<SearchResults />} />
-          <Route element={<PageNotFound />} />
+          <Route path="**" element={<PageNotFound />} />
         </Routes>
       </Router>
     </div>
