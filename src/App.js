@@ -14,9 +14,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path="/#/" element={<Home />} />
-          <Route exact path="/movies" element={<MoviesScreen />} />
-          <Route exact path="/tvShows" element={<TvShowsScreen />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<MoviesScreen />} />
+          <Route path="/tvShows" element={<TvShowsScreen />} />
           <Route path="/about_movie/:movieID/:type" element={<MovieInfo />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="*" element={<PageNotFound />} />
