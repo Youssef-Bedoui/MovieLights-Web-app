@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./genreFilter.css";
 import TextField from "@mui/material/TextField";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
-import movieApi from "../../shared/movieApi";
-import { APIKey } from "../../shared/movieApiKey";
+import movieApi from "../../movieApi";
+import { APIKey } from "../../movieApiKey";
 import { addMovies } from "../../redux/features/movieSlice";
 import { useDispatch } from "react-redux";
 

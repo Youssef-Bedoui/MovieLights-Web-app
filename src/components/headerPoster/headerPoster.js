@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./headerPoster.css";
-import { movieImagePath } from "../../shared/movieImagePath";
-import movieApi from "../../shared/movieApi";
-import { APIKey } from "../../shared/movieApiKey";
+import { movieImagePath } from "../../movieImagePath";
+import movieApi from "../../movieApi";
+import { APIKey } from "../../movieApiKey";
 import HeaderTrendCard from "../headerTrendCard/headerTrendCard";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import ArrowBackIosSharpIcon from "@mui/icons-material/ArrowBackIosSharp";

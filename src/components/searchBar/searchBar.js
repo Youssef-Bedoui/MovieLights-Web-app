@@ -2,7 +2,7 @@ import * as React from "react";
 import "./searchbar.css";
 import useAutocomplete from "@mui/base/useAutocomplete";
 import { styled } from "@mui/system";
-import { APIKey } from "./../../shared/movieApiKey";
+import { APIKey } from "../../movieApiKey";
 import { useDispatch } from "react-redux";
 import { addSearchedMovies } from "../../redux/features/movieSlice";
 import { useNavigate } from "react-router-dom";

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./moviesScreen.css";
 import { useDispatch } from "react-redux";
-import movieApi from "../../shared/movieApi";
-import { APIKey } from "../../shared/movieApiKey";
+import movieApi from "../../movieApi";
+import { APIKey } from "../../movieApiKey";
 import { addMovies } from "../../redux/features/movieSlice";
 import HeaderPoster from "../../components/headerPoster/headerPoster";
 import MovieList from "../../components/movieList/movieList";

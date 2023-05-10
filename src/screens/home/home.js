@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
-import movieApi from "../../shared/movieApi";
-import { APIKey } from "../../shared/movieApiKey";
+import { APIKey } from "../../movieApiKey";
+import movieApi from "../../movieApi";
 import MovieList from "../../components/movieList/movieList";
 import { useDispatch } from "react-redux";
 import { addMovies } from "../../redux/features/movieSlice";

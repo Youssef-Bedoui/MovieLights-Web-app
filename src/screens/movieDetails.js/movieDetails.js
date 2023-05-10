@@ -1,6 +1,6 @@
 import React from "react";
 import "./movieDetails.css";
-import { movieImagePath } from "../../shared/movieImagePath";
+import { movieImagePath } from "../../movieImagePath";
 import { useNavigate } from "react-router-dom";
 
 export default function MovieDetails({ data, type }) {

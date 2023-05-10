@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./movieInfo.css";
-import movieApi from "../../shared/movieApi";
-import { APIKey } from "../../shared/movieApiKey";
+import movieApi from "../../movieApi";
+import { APIKey } from "../../movieApiKey";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addMovieInfo, getMovieInfo } from "../../redux/features/movieSlice";
-import { movieImagePath } from "../../shared/movieImagePath";
+import { movieImagePath } from "../../movieImagePath";
 import RateStars from "../../components/rateStarts/rateStars";
 import HdIcon from "@mui/icons-material/Hd";
 import Footer from "../footer/footer";
