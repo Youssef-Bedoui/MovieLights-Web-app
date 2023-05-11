@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/MovieLights-Web-app/static/css/main.4bfdc3ad.css",
-    "main.js": "/MovieLights-Web-app/static/js/main.cadda560.js",
+    "main.js": "/MovieLights-Web-app/static/js/main.4dae902b.js",
     "index.html": "/MovieLights-Web-app/index.html",
     "main.4bfdc3ad.css.map": "/MovieLights-Web-app/static/css/main.4bfdc3ad.css.map",
-    "main.cadda560.js.map": "/MovieLights-Web-app/static/js/main.cadda560.js.map"
+    "main.4dae902b.js.map": "/MovieLights-Web-app/static/js/main.4dae902b.js.map"
   },
   "entrypoints": [
     "static/css/main.4bfdc3ad.css",
-    "static/js/main.cadda560.js"
+    "static/js/main.4dae902b.js"
   ]
 }
