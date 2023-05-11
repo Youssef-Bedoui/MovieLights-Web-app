@@ -11,14 +11,15 @@ import SearchResults from "./screens/searchResults/searchResults";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={"/MovieLights-Web-app"}>
         <Navbar />
-        <Routes basename="/MovieLights-Web-app">
-          <Route path="#/" element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/movies" element={<MoviesScreen />} />
           <Route path="/tvShows" element={<TvShowsScreen />} />
           <Route path="/about_movie/:movieID/:type" element={<MovieInfo />} />
           <Route path="/search" element={<SearchResults />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     </div>
