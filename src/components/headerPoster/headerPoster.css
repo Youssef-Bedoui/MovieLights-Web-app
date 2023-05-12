@@ -34,8 +34,13 @@
   }
   .header-right {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 65px);
   }
+}
+@media (max-width: 480px){
+.header-right img,.wrapper-shadow,.header-wrapper{
+  height: calc(100vh - 140px) !important;
+}
 }
 
 .header-container {
