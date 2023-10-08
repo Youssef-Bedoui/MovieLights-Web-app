@@ -11,7 +11,7 @@ import SearchResults from "./screens/searchResults/searchResults";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={"/MovieLights-Web-app"}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
